@@ -28,7 +28,7 @@
     function done(value) {
       ipost({ method: 'done', id: data.id, value: value });
     }
-    var callback = new Function('env', 'I', fnBody);
+    var callback = new Function('ENV', 'I', fnBody);
     var I = {
       _ipost: ipost,
       payload: data.payload,
